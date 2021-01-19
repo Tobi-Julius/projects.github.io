@@ -1,0 +1,86 @@
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(bg-stars.svg);
+    background-color: rgb(3, 3, 20);
+    position: relative;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+}
+.launching-text {
+    letter-spacing: 6px;
+    text-align: center;
+    margin-left: -5px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1.2em;
+}
+main {
+    text-align: center;  
+    height: 30vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.counter-container{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.counter-bg {
+    background: rgb(35, 49, 75);
+    width: 4em;
+    height: 3.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1em;
+    color: palevioletred;
+}
+.counter-bg:before {
+    content: '';
+    bottom: -25px;
+    width: 100%;
+    height: 1.6em;
+    background: rgb(88, 54, 74);
+    position: absolute;
+    font-weight: 500;
+    color: black;
+}
+.counter-bg#day:before {
+    content: 'Days';
+}
+.counter-bg#hour:before {
+    content: 'Hours';
+}
+.counter-bg#minute:before {
+    content: 'Minutes';
+}
+.counter-bg#second:before {
+    content: 'Seconds';
+}
+footer {
+    height: 30vh;
+    background: url(pattern-hills.svg) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+.social-icons {
+    padding: 2px;
+    margin-right: 1em;
+    font-size: 1em;
+}
+.social-icons:hover{
+    background: palevioletred;
+}
