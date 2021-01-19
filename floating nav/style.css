@@ -1,0 +1,105 @@
+*, *::after,*::before {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: 100%;
+    line-height: 1.5;
+}
+html {
+    font-size: 12px;
+}
+body {
+    background: url(bg.jpg);
+    margin: 0%;
+    background-size:auto;
+    /* background-color: #333; */
+}
+nav {
+    --duration:.5s;
+    --easing: ease-in-out;
+    position: relative;
+    width: 50%;
+    margin: 1.5em;
+    display: none;
+    transition: display 1.3s;
+}
+
+nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin: -.2em 0 0 0;
+}
+nav a {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    transform-origin: 0 0;
+    transition: transform var(--duration) var(--easing), color var var(--duration) var var(--easing);
+    transition-delay: .5s;
+    border-radius: 4px;
+    padding: 1em 1.52em;
+}
+nav a:hover {
+    background: #efefef;
+}
+nav .sub-menu a {
+    font-size: .9em;
+    color: #666666;
+    border-left: 2em solid #fff;
+    padding: .75em;
+    background: linear-gradient(to right, #ddd 2px, #fff 2px);
+}
+nav .sub-menu a:hover {
+    background: linear-gradient(to right, #ddd 2px, #efefef 2px);
+}
+nav header {
+    font-weight: 600;
+    display: block;
+    background: rgba(255, 255, 255, .5);
+    transform-origin: 0 0;
+    transition: transform var(--duration) var(--easing), color var var(--duration) var var(--easing);
+    border-radius: 4px;
+    padding: 1em 1.52em; 
+}
+nav header span {
+    border: none;
+    background: transparent;
+    font-size: 1.2em;
+    padding: 0;
+    cursor: pointer;
+    float: right;
+}
+nav footer button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: calc(1em -2px);
+    width: 100%;
+    transform-origin: 0 0;
+    /* transition: transform var(--duration) var(--easing);
+    transition-delay: calc  (var(--duration) = (var(--count)/ 2)); */
+    cursor: pointer;
+    outline: none;
+    background: #cdcdcd;
+    opacity: 0;
+}
+nav .closed a,
+nav .closed header {
+    transform: translateY(-50%) scaleY(0.1) scaleX(0.2);
+    transition-delay: .5s;
+    color: transparent;
+}
+nav .closed footer button {
+    transition-delay: 0s;
+    transform: translateY(0.7) scaleX(0.2);
+}
+.fa-bars {
+    /* display: none; */
+    font-size: 2em;
+    margin-left: 2em;
+    cursor: pointer;
+}
