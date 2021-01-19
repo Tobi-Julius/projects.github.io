@@ -1,0 +1,236 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 12px;
+}
+.nav {
+    width: 100%;
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    background: brown;
+    position: fixed;
+    padding: 1.3em 1em;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    background: rgba(0, 0, 0, .9);
+    padding: 0 4em;
+    transform: translatex(-100%);
+    transition: transform 1.2s;
+    z-index: 1250;
+}
+.nav-link {
+    color: rgb(124, 54, 54);
+    text-decoration: none;
+    font-size: 1.4em;
+    padding-bottom: .2em;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: brown;
+    border-bottom: 1px dashed rgb(117, 90, 90);
+    font-size: 1.2em;
+}
+.toggle-btn {
+    position: absolute;
+    right: 5%;
+    z-index: 1500;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: rgb(189, 181, 180);
+}
+.site-title {
+    color: #000;
+    text-decoration: none;
+}
+.fa-times {
+    display: none;
+}
+
+.open .fa-times {
+    display: block;
+}
+.open .fa-bars {
+    display: none;
+}
+.open .nav-list {
+    transform: translateX(0);
+}
+img{
+    background: url(images/unibg.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-attachment: local;
+}
+.can-section {
+    padding: 2em;
+}
+.can-img {
+    background: chocolate;
+
+}
+.sub-title {
+    margin-bottom: 1.2em;
+    text-align: center;
+
+}
+.item {
+    list-style: circle;
+    margin-bottom: .6em;
+}
+.link {
+    text-decoration: none;
+    color: black;
+}
+footer {
+    background: #000;
+    color: #fff;
+    padding: 2em 1.8em;
+    text-align: center;
+}
+.footer-container {
+    margin: 0 auto;
+    width: 70%;
+}
+.about-us {
+    margin: 1.4em auto;
+
+}
+.footer-about {
+    font-family: tahoma;
+    color: brown;
+}
+.form {
+    margin-bottom: 1.4em;
+}
+.footer-nav-list {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+.footer-nav-link {
+    text-decoration: none;
+    padding: 0 .3em;
+}
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+    color: brown;
+    font-size: 1.1em;
+    border-left: 1px dashed brown;
+    border-right: 1px dashed brown;
+}
+.about-us p {
+    max-width: 100%;
+}
+.input {
+    height: 2em;
+    border: none;
+}
+.input:focus {
+    border: none;
+}
+.btn {
+    height: 2em;
+    border: none;
+    font-family: cursive;
+}
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+.news {
+    margin-top: .7em;
+}
+@media all and (min-width:375px) and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+    img{
+        background: url(images/ipd.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        background-attachment: scroll;
+    }
+}
+@media all and (min-width:768px) and (max-width:1440px) {
+    html {
+        font-size: 12px;
+    }
+    img{
+        background: url(images/desk.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        background-attachment: scroll;
+    }
+    .toggle-btn {
+        position: relative;
+        display: none;
+        right: 0;
+    }
+    .nav {
+        width: 100%;
+        padding: initial;
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        position: fixed;
+        padding: 1em 2%;
+    }
+    .nav-list {
+        top: initial;
+        left: initial;
+        position: initial;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: initial;
+        list-style: none;
+        background: initial; 
+        padding: initial;
+        transform: initial;
+        transition: initial;
+        z-index: initial;
+        width: 100%;
+    }
+    .list {
+        width: 100%;
+    }
+    .nav-link {
+        color: #000;
+        text-decoration: none;
+        font-size: 1em;
+        padding-bottom: .2em;
+        margin-right: .5em;
+    }
+    .site-name {
+        width: 35%;
+    }
+    .can-section {
+        padding: 2em;
+        padding-left: 5em;
+    }
+}
