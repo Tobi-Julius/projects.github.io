@@ -1,4 +1,4 @@
-var bars = document.querySelector('.tog-btn')
+var bars = document.querySelector('.fa-bars')
 var nav = document.querySelector('nav')
 
 
