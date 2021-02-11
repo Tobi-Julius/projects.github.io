@@ -1,0 +1,64 @@
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-container {
+    position: relative;
+    height: 80vh;
+    width: 80%;
+    background: #222;
+}
+.img-container .clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.clip.clip1 {
+    background: url(bg1.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%);
+}
+.clip.clip2 {
+    background: url(bg2.jpg);
+    background-size: cover;
+    clip-path: polygon(50% 0, 100% 0, 60% 100%, 30% 100%);
+}
+.clip.clip3 {
+    background: url(bg3.jpg);
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 60% 100%);
+}
+.img-container:hover .clip {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.img-container .clip:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.img-container .clip .content {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+.clip .content:hover {
+    bottom: 0;
+    opacity: 1;
+}
